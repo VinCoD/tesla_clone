@@ -1,9 +1,14 @@
+import styled from "styled-components"
 function Header() {
     return(
-        <div>
+        <Container>
             header
-        </div>
+        </Container>
     )
 }
 
 export default Header
+
+const Container = styled.div`
+
+`
