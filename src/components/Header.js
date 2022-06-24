@@ -20,6 +20,15 @@ function Header() {
 
                 </CustomMenu>
             </RightMenu>
+            <BurgerNav>
+                <li><a href="#">Existing Inventory</a></li>
+                <li><a href="#">Used Inventory</a></li>
+                <li><a href="#">Trade In</a></li>
+                <li><a href="#">Cybertruck</a></li>
+                <li><a href="#">Roadaster</a></li>
+                <li><a href="#">Existing Inventory</a></li>
+                <li><a href="#">Existing Inventory</a></li>
+            </BurgerNav>
 
         </Container>
     )
@@ -32,10 +41,12 @@ const Container = styled.div`
     position: fixed;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 0 20px;
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1;
 
 `
 const Menu = styled.div`
@@ -50,6 +61,9 @@ const Menu = styled.div`
         padding: 0 10px;
         flex-wrap: nowrap;
         
+    }
+    @media(max-width: 760px){
+        display:none;
     }
 `
 
@@ -67,4 +81,14 @@ a{
 `
 const CustomMenu = styled(MenuIcon)`
     cursor: pointer;
+`
+
+const BurgerNav = styled.div`
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: white;
+    width: 300px;
+    z-index: 100;;
 `
